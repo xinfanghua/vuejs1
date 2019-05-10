@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue2介绍</title>
+</head>
+<body>
+  <div id="vuejs1">
+    {{message}}
+  </div>
+  <div id="vuejs2">
+    <span v-bind:title="message">
+      把鼠标放到这里试试
+    </span>
+  </div>
+  <script src="src/js/vue.min.js"></script>
+  <script type="text/javascript">
+    //vue应用对象
+    var vuejs1=new Vue({
+      el:"#vuejs1",
+      data:{
+        message: "Hello Vue2!"
+      }
+    })
+    //绑定属性
+    var vuejs2=new Vue({
+      el:"#vuejs2",
+      data:{
+        message: "页面加载时间是：" + new Date().toLocaleDateString()
+      }
+    })
+  </script>
+</body>
+</html>
